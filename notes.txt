@@ -1,0 +1,20 @@
+Bean scope -
+
+Singleton - one object is created and returned for every request
+
+prototype - new Object is created for every request
+
+Example : 
+<bean id = "myCoach" class="com.springdemo.TrackCoach" scope="prototype">
+    	
+</bean>
+
+
+
+Custom hooks for bean lifecycle : 
+
+we can call init-method and destroy method. Means what to do when bean initializes and what to do when bean is destroyed.
+Note : for prototype beans,Spring does not call the destroy method.
+
+calling init and destroy method from xml file : 
+see beanLifecycle-applicationContext.xml file.
